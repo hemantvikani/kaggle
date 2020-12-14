@@ -12,7 +12,7 @@ from sklearn.tree import DecisionTreeRegressor
 
 
 # Path of the file to read
-iowa_file_path = 'train.csv'
+iowa_file_path = 'train(1).csv'
 
 home_data = pd.read_csv(iowa_file_path)
 # Create target object and call it y
@@ -53,3 +53,7 @@ final_model = DecisionTreeRegressor(max_leaf_nodes=best_tree_size, random_state=
 
 # fit the final model
 final_model.fit(X, y)
+
+s = final_model.score(X,y)
+#accuracy
+print(s)
